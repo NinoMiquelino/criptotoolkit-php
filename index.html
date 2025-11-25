@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CriptoToolkit - Biblioteca de Segurança</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🔐 CriptoToolkit</h1>
+            <p>Biblioteca completa de ferramentas criptográficas</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Gerador de Arrays Criptográficos -->
+        <section class="card">
+            <h2 class="section-title">🎲 Gerador de Arrays Criptográficos</h2>
+            <div class="form-group">
+                <label for="randomType">Tipo:</label>
+                <select id="randomType">
+                    <option value="hex">Hexadecimal</option>
+                    <option value="base64">Base64</option>
+                    <option value="bin">Binário</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="randomLength">Tamanho (bytes):</label>
+                <input type="number" id="randomLength" value="32" min="1" max="1024">
+            </div>
+            <button class="btn" id="generateRandom">Gerar</button>
+            <div class="form-group">
+                <label>Resultado:</label>
+                <textarea id="randomResult" class="result-area" rows="3" readonly></textarea>
+            </div>
+        </section>
+
+        <!-- PBKDF2 -->
+        <section class="card">
+            <h2 class="section-title">🔑 PBKDF2</h2>
+            <div class="form-group">
+                <label for="pbkdf2Password">Senha:</label>
+                <input type="password" id="pbkdf2Password" placeholder="Digite a senha">
+            </div>
+            <div class="form-group">
+                <label for="pbkdf2Salt">Salt (opcional):</label>
+                <input type="text" id="pbkdf2Salt" placeholder="Deixe em branco para gerar automaticamente">
+            </div>
+            <div class="form-group">
+                <label for="pbkdf2Iterations">Iterações:</label>
+                <input type="number" id="pbkdf2Iterations" value="100000" min="1">
+            </div>
+            <button class="btn" id="generatePbkdf2">Gerar Hash</button>
+            <div class="form-group">
+                <label>Resultado:</label>
+                <textarea id="pbkdf2Result" class="result-area" rows="3" readonly></textarea>
+            </div>
+        </section>
+
+        <!-- HMAC -->
+        <section class="card">
+            <h2 class="section-title">📝 Assinaturas HMAC</h2>
+            <div class="form-group">
+                <label for="hmacData">Dados:</label>
+                <textarea id="hmacData" rows="3" placeholder="Dados para assinar"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="hmacKey">Chave:</label>
+                <input type="text" id="hmacKey" placeholder="Chave secreta">
+            </div>
+            <div class="form-group">
+                <label for="hmacAlgorithm">Algoritmo:</label>
+                <select id="hmacAlgorithm">
+                    <option value="sha256">SHA-256</option>
+                    <option value="sha1">SHA-1</option>
+                    <option value="sha512">SHA-512</option>
+                </select>
+            </div>
+            <button class="btn" id="generateHmac">Gerar HMAC</button>
+            <div class="form-group">
+                <label>Resultado:</label>
+                <textarea id="hmacResult" class="result-area" rows="3" readonly></textarea>
+            </div>
+        </section>
+
+        <!-- WebAuthn -->
+        <section class="card">
+            <h2 class="section-title">🔒 WebAuthn</h2>
+            <div class="form-group">
+                <label for="webauthnUsername">Username:</label>
+                <input type="text" id="webauthnUsername" placeholder="Seu username">
+            </div>
+            <button class="btn btn-success" id="registerWebAuthn">Registrar WebAuthn</button>
+            <div class="form-group">
+                <small>Suporta autenticação por biometria, PIN ou segurança de plataforma</small>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
