@@ -1,0 +1,156 @@
+# Dependencies
+/vendor/
+/node_modules/
+/composer.lock
+/package-lock.json
+/yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Log files
+*.log
+/debug.log
+/backend/debug.log
+logs/
+error_log
+
+# Session files
+/sess_*
+*/sess_*
+
+# Cache files
+.cache/
+*.tmp
+*.temp
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# OS generated files
+Icon?
+ehthumbs.db
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Build outputs
+/dist/
+/build/
+
+# Runtime data
+*.runtimeconfig.json
+
+# Temporary files
+/tmp/
+/temp/
+
+# Session and cache
+/sessions/
+/cache/
+
+# SSL certificates (não versionar certificados)
+*.crt
+*.key
+*.pem
+*.csr
+
+# Database files (se houver)
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads directory (se houver uploads)
+/uploads/
+/files/
+
+# Development configuration overrides
+/config.local.php
+/config.dev.php
+
+# API keys and secrets
+*_key.php
+*_secret.php
+*_config.php
+
+# Composer
+composer.phar
+
+# PHPUnit
+/phpunit.xml
+
+# Backup of project files
+*.backup.php
+*.backup.js
+*.backup.html
+
+# Local development overrides
+/local/
+/development/
+
+# Production ready check
+/ready.txt
+
+# Documentation builds
+/docs/_build/
+/site/
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Application specific
+/backups/
+/exports/
+/imports/
